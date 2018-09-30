@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import DevTools from 'mobx-react-devtools'
@@ -36,5 +36,5 @@ class Count extends Component {
   }
 }
 
-ReactDOM.render(<Count store={new appState()} />, document.getElementById('root'));
+render(<Count store={new appState()} />, document.getElementById('app'));
 registerServiceWorker();
